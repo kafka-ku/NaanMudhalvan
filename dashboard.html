@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Personal Expense Tracker</title>
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" href="navbar.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         Navigation Bar
+    ============================== -->
+
+    <nav class="navbar">
+
+        <div class="nav-brand">
+            💰 Expense Tracker
+        </div>
+
+        <div class="nav-links">
+
+            <a href="dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="income.html">
+                💰 Income
+            </a>
+
+            <a href="index.html">
+                💸 Expense
+            </a>
+
+            <a href="analytics.html">
+                📊 Analytics
+            </a>
+
+            <a href="report.html">
+                📄 Report
+            </a>
+
+            <a href="login.html" id="logoutBtn">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ==============================
+         Dashboard Header
+    ============================== -->
+
+    <header class="dashboard-header">
+
+        <div>
+            <h1>Dashboard</h1>
+            <p>Personal Expense Tracker</p>
+        </div>
+
+    </header>
+
+
+    <main class="dashboard-container">
+
+
+        <!-- ==============================
+             Summary Cards
+        ============================== -->
+
+        <section class="summary-grid">
+
+            <div class="summary-card balance-card">
+
+                <h3>Total Balance</h3>
+
+                <p id="totalBalance">
+                    ₹0
+                </p>
+
+            </div>
+
+
+            <div class="summary-card income-card">
+
+                <h3>Total Income</h3>
+
+                <p id="totalIncome">
+                    ₹0
+                </p>
+
+            </div>
+
+
+            <div class="summary-card expense-card">
+
+                <h3>Total Expense</h3>
+
+                <p id="totalExpense">
+                    ₹0
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             Recent Income
+        ============================== -->
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>
+                    Recent Income
+                </h2>
+
+                <a href="income.html">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div id="recentIncome" class="transaction-list">
+
+                <p class="empty-message">
+                    No income records found.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             Recent Expenses
+        ============================== -->
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>
+                    Recent Expenses
+                </h2>
+
+                <a href="index.html">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div id="recentExpenses" class="transaction-list">
+
+                <p class="empty-message">
+                    No expense records found.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             Quick Actions
+        ============================== -->
+
+        <section class="dashboard-section">
+
+            <h2>
+                Quick Actions
+            </h2>
+
+
+            <div class="quick-actions">
+
+                <a href="income.html" class="action-btn income-action">
+                    ➕ Add Income
+                </a>
+
+
+                <a href="index.html" class="action-btn expense-action">
+                    ➕ Add Expense
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             Analytics & Reports
+        ============================== -->
+
+        <section class="dashboard-section">
+
+            <h2>
+                Analytics & Reports
+            </h2>
+
+
+            <div class="quick-actions">
+
+                <a href="analytics.html"
+                   class="action-btn analytics-action">
+
+                    📊 Analytics
+
+                </a>
+
+
+                <a href="report.html"
+                   class="action-btn reports-action">
+
+                    📄 Report
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             Monthly Summary
+        ============================== -->
+
+        <section class="dashboard-section">
+
+            <h2>
+                Monthly Summary
+            </h2>
+
+
+            <div class="monthly-grid">
+
+
+                <div class="monthly-card">
+
+                    <h3>
+                        Monthly Income
+                    </h3>
+
+                    <p id="monthlyIncome">
+                        ₹0
+                    </p>
+
+                </div>
+
+
+                <div class="monthly-card">
+
+                    <h3>
+                        Monthly Expense
+                    </h3>
+
+                    <p id="monthlyExpense">
+                        ₹0
+                    </p>
+
+                </div>
+
+
+                <div class="monthly-card">
+
+                    <h3>
+                        Monthly Balance
+                    </h3>
+
+                    <p id="monthlyBalance">
+                        ₹0
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         JavaScript
+    ============================== -->
+
+    <!-- Authentication -->
+    <script src="auth.js"></script>
+
+    <!-- Navbar -->
+    <script src="navbar.js"></script>
+
+    <!-- Dashboard -->
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

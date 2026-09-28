@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Expense Report</title>
+
+    <link rel="stylesheet" href="report.css">
+    <link rel="stylesheet" href="navbar.css">
+
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="nav-brand">
+            💰 Expense Tracker
+        </div>
+
+        <div class="nav-links">
+
+            <a href="dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="income.html">
+                💰 Income
+            </a>
+
+            <a href="index.html">
+                💸 Expense
+            </a>
+
+            <a href="analytics.html">
+                📊 Analytics
+            </a>
+
+            <a href="report.html">
+                📄 Report
+            </a>
+
+            <a href="login.html" id="logoutBtn">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Report Header -->
+
+    <header class="report-header">
+
+        <h1>
+            Expense Reports
+        </h1>
+
+        <p>
+            View and filter your financial records
+        </p>
+
+    </header>
+
+
+    <main class="report-container">
+
+
+        <!-- Report Controls -->
+
+        <section class="report-controls">
+
+
+            <div class="form-group">
+
+                <label for="fromDate">
+                    From Date
+                </label>
+
+                <input
+                    type="date"
+                    id="fromDate"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="toDate">
+                    To Date
+                </label>
+
+                <input
+                    type="date"
+                    id="toDate"
+                >
+
+            </div>
+
+
+            <button id="filterButton">
+                🔍 Filter
+            </button>
+
+
+            <button id="resetButton">
+                🔄 Reset
+            </button>
+
+
+            <button onclick="window.print()">
+                🖨️ Print
+            </button>
+
+        </section>
+
+
+        <!-- Summary -->
+
+        <section class="report-summary">
+
+
+            <div class="report-card">
+
+                <h3>
+                    Total Income
+                </h3>
+
+                <p id="reportIncome">
+                    ₹0
+                </p>
+
+            </div>
+
+
+            <div class="report-card">
+
+                <h3>
+                    Total Expense
+                </h3>
+
+                <p id="reportExpense">
+                    ₹0
+                </p>
+
+            </div>
+
+
+            <div class="report-card">
+
+                <h3>
+                    Savings
+                </h3>
+
+                <p id="reportSavings">
+                    ₹0
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Income Report -->
+
+        <section class="report-section">
+
+            <h2>
+                Income Report
+            </h2>
+
+            <p>
+                Total Records:
+                <span id="incomeCount">0</span>
+            </p>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Source
+                            </th>
+
+                            <th>
+                                Amount
+                            </th>
+
+                            <th>
+                                Date
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="incomeReportList">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Expense Report -->
+
+        <section class="report-section">
+
+            <h2>
+                Expense Report
+            </h2>
+
+            <p>
+                Total Records:
+                <span id="expenseCount">0</span>
+            </p>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Name
+                            </th>
+
+                            <th>
+                                Category
+                            </th>
+
+                            <th>
+                                Amount
+                            </th>
+
+                            <th>
+                                Date
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="expenseReportList">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Category Summary -->
+
+        <section class="report-section">
+
+            <h2>
+                Category Summary
+            </h2>
+
+
+            <div id="categorySummary">
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="auth.js"></script>
+    <script src="navbar.js"></script>
+    <script src="report.js"></script>
+
+</body>
+
+</html>
